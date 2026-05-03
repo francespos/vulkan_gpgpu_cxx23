@@ -1,9 +1,9 @@
 #include <expected>
-#include <string>
-#include <print>
 #include <mdspan>
-#include <utility>
+#include <print>
+#include <string>
 #include <string_view>
+#include <utility>
 
 std::expected<int, std::string> safe_division(int x, int y) {
     if (y == 0) {
@@ -35,15 +35,16 @@ public:
     explicit Person(std::string_view name, std::string_view surname)
         : name_(name), surname_(surname) {}
 
-    template<typename Self>
-    auto&& name(this Self&& self) {
+    template <typename Self>
+    auto &&name(this Self &&self) {
         return std::forward<Self>(self).name_;
     }
 
-    template<typename Self>
-    auto&& surname(this Self&& self) {
+    template <typename Self>
+    auto &&surname(this Self &&self) {
         return std::forward<Self>(self).surname_;
     }
+
 private:
     std::string name_;
     std::string surname_;
