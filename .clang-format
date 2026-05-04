@@ -6,3 +6,5 @@ AllowShortFunctionsOnASingleLine: Empty
 BreakBeforeBraces: Attach
 SpaceBeforeParens: ControlStatements
 AlwaysBreakTemplateDeclarations: Yes
+PointerAlignment: Left
+FixNamespaceComments: true
